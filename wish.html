@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Belleza&display=swap" rel="stylesheet">
+
+<style>
+    body {
+        margin: 0;
+        font-family: 'Belleza', sans-serif !important;
+        background: #bf2c46;
+        overflow: hidden;
+        text-align: center;
+        color: #ffffff;
+        letter-spacing: 0.5px;
+    }
+
+    h1 {
+        margin-top: 40px;
+        font-size: 3em;
+        font-family: 'Pacifico', cursive;
+        color: #ffffff;
+        text-shadow: 0 3px 10px rgba(0,0,0,0.2);
+    }
+
+    .message {
+        font-family: 'Belleza', sans-serif !important;
+        max-width: 720px;
+        margin: 20px auto;
+        font-size: 1.1em;
+        line-height: 1.7;
+        background: rgba(255,255,255,0.25);
+        padding: 25px;
+        border-radius: 20px;
+        backdrop-filter: blur(12px);
+        color: #fff;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+
+    /* Balloons */
+    .balloon {
+        position: absolute;
+        width: 50px;
+        height: 65px;
+        border-radius: 50% 50% 45% 45%;
+        animation: float 10s infinite ease-in;
+    }
+
+    .balloon::after {
+        content: '';
+        position: absolute;
+        width: 2px;
+        height: 40px;
+        background: #ffffff;
+        top: 65px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .balloon::before {
+        content: '';
+        position: absolute;
+        width: 15px;
+        height: 15px;
+        background: rgba(255,255,255,0.4);
+        border-radius: 50%;
+        top: 10px;
+        left: 10px;
+    }
+
+    @keyframes float {
+        0% { transform: translateY(100vh); }
+        100% { transform: translateY(-120vh); }
+    }
+
+    /* Fairy lights */
+    .lights {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        padding: 10px 0;
+    }
+
+    .bulb {
+        width: 12px;
+        height: 22px;
+        background: #fff176;
+        border-radius: 50%;
+        box-shadow: 0 0 12px #fff176;
+        animation: blink 1s infinite alternate;
+    }
+
+    @keyframes blink {
+        from { opacity: 0.4; }
+        to { opacity: 1; }
+    }
+
+
+/* Mobile Optimization */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2em;
+        margin-top: 20px;
+    }
+
+    .message {
+        margin: 15px;
+        padding: 18px;
+        font-size: 0.95em;
+        line-height: 1.6;
+    }
+
+    .lights {
+        justify-content: space-between;
+        padding: 8px;
+    }
+
+    .bulb {
+        width: 10px;
+        height: 18px;
+    }
+}
+
+</style>
+</head>
+<body>
+
+<div class="lights">
+    <div class="bulb"></div>
+    <div class="bulb"></div>
+    <div class="bulb"></div>
+    <div class="bulb"></div>
+    <div class="bulb"></div>
+</div>
+
+<h1>Happy Birthday Gaytri 🎉</h1>
+
+<div class="message">
+Honestly, you are a very special person in my life. You’re not just a friend, but someone really close with whom I don’t have to think much before joking around or talking freely.<br><br>
+Your vibe, your energy, and your nature are truly very unique. All our little moments and random conversations… they mean a lot to me.<br><br>
+I feel really lucky that you’re in my life.<br><br>
+And there’s one thing I want to say from the heart…<br><br>
+I developed feelings in our friendship, which I probably shouldn’t have.<br>
+For that, I’m truly sorry… extremely sorry!!<br><br>
+If you don’t want that, I promise it won’t happen again.<br>
+I really value our friendship a lot, and I do care about it.<br><br>
+Stay the way you are—don’t ever change yourself for anyone.<br><br>
+On your birthday, I just wish that all your dreams come true, and your life is always filled with happiness, success, and positivity.<br><br>
+Once again, Happy Birthday.<br>
+Stay happy, stay blessed… and always keep smiling.
+<br><br>
+<div style="text-align:left; margin-top:10px; font-weight:500;">
+Yours,<br>
+Arjun
+</div>
+</div>
+
+<script>
+for (let i = 0; i < 18; i++) {
+    let balloon = document.createElement('div');
+    balloon.className = 'balloon';
+    balloon.style.left = Math.random() * 100 + 'vw';
+    balloon.style.background = `hsl(${Math.random()*360},70%,65%)`;
+    balloon.style.animationDuration = (6 + Math.random()*6) + 's';
+    document.body.appendChild(balloon);
+}
+</script>
+
+
+
+
+</body>
+</html>
